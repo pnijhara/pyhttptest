@@ -18,7 +18,7 @@ def method_dispatcher(*args, **kwargs):
     :returns: Result from the handler.
     :rtype: func
     """
-    http_method, url = args
+    http_method, _ = args
 
     if http_method not in constants.HTTP_METHOD_NAMES:
         raise HTTPMethodNotSupportedError(http_method)
